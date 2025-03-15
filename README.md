@@ -286,6 +286,8 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/a8b45948-766a-49a4-b779-91ac3ce0443c)
 #
 - <b>Now, go to github repository and under <mark>automations</mark> directory update the <mark>instance-id</mark> field on the <mark>updatebackendnew.sh</mark> with the k8s worker's instance id</b>
+![image](https://github.com/user-attachments/assets/2c376ae8-25fb-4125-bdfd-07f251cc0634)
+
 ![image](https://github.com/user-attachments/assets/bdcc57b1-15b8-4ff9-a2e2-93d46b8ea56e)
 #
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
