@@ -175,7 +175,7 @@ sudo apt-get install jenkins -y
     - <b>Availability:</b> Keep this agent online as much as possible
 #
   - And your jenkins worker node is added
-  ![image](https://github.com/user-attachments/assets/cab93696-a4e2-4501-b164-8287d7077eef)
+  ![image](https://github.com/user-attachments/assets/8e2544ce-ab2b-452f-b6cf-385d2c383d21)
 
 # 
 - <b id="docker">Install docker (Jenkins Worker)</b>
