@@ -251,10 +251,10 @@ sudo apt-get install trivy -y
   - Pipeline: Stage View
 #
 - <b id="Owasp">Configure OWASP, move to <mark>Manage Jenkins --> Plugins --> Available plugins</mark> (Jenkins Worker)</b>
-![image](https://github.com/user-attachments/assets/da6a26d3-f742-4ea8-86b7-107b1650a7c2)
+![image](https://github.com/user-attachments/assets/3fb9dd65-7c04-43d0-b476-4fe334263652)
 
 - <b id="Sonar">After OWASP plugin is installed, Now move to <mark>Manage jenkins --> Tools</mark> (Jenkins Worker)</b>
-![image](https://github.com/user-attachments/assets/3b8c3f20-202e-4864-b3b6-b48d7a604ee8)
+![image](https://github.com/user-attachments/assets/02e417d1-fdf5-4287-97cb-8ebcc83e88bc)
 #
 - <b>Login to SonarQube server and create the credentials for jenkins to integrate with SonarQube</b>
   - Navigate to <mark>Administration --> Security --> Users --> Token</mark>
