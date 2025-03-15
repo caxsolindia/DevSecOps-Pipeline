@@ -170,7 +170,7 @@ sudo apt-get install jenkins -y
     - <b>Usage:</b> Only build jobs with label expressions matching this node
     - <b>Launch method:</b> Via ssh
     - <b>Host:</b> \<public-ip-worker-jenkins\>
-    - <b>Credentials:</b> <mark>Add --> Kind: ssh username with private key --> ID: Worker --> Description: Worker --> Username: root --> Private key: Enter directly --> Add Private key</mark>
+    - <b>Credentials:</b> <mark>Add --> Kind: ssh username with private key --> ID: Worker --> Description: Worker --> Username: ubuntu --> Private key: Enter directly --> Add Private key</mark>
     - <b>Host Key Verification Strategy:</b> Non verifying Verification Strategy
     - <b>Availability:</b> Keep this agent online as much as possible
 #
