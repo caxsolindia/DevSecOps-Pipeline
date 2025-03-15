@@ -24,8 +24,7 @@
 ![image](https://github.com/user-attachments/assets/82b3cb42-2197-48f9-9cbf-ca18dd1b303e)
 
 - <b>ArgoCD application for deployment on EKS</b>
-
-![image](https://github.com/user-attachments/assets/1ea9d486-656e-40f1-804d-2651efb54cf6)
+![image](https://github.com/user-attachments/assets/33e40138-b8fd-4f61-8817-9c1e05aaca8d)
 
 #
 > [!Important]
