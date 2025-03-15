@@ -225,15 +225,17 @@ sudo apt-get install trivy -y
   kubectl get svc -n argocd
   ```
   - <b> Check the port where ArgoCD server is running and expose it on security groups of a cluster node</b>
-![image](https://github.com/user-attachments/assets/6adc3053-f1c5-464e-baf7-903aef38abf2)
+  
+  ![image](https://github.com/user-attachments/assets/6adc3053-f1c5-464e-baf7-903aef38abf2)
 
   - <b>Access it on browser, click on advance and proceed with</b>
   ```bash
-  <public-ip-worker>:<port>
+  <public-ip-cluster node>:<port>
   ```
-  ![image](https://github.com/user-attachments/assets/29d9cdbd-5b7c-44b3-bb9b-1d091d042ce3)
-  ![image](https://github.com/user-attachments/assets/08f4e047-e21c-4241-ba68-f9b719a4a39a)
-  ![image](https://github.com/user-attachments/assets/1ffa85c3-9055-49b4-aab0-0947b95f0dd2)
+  ![image](https://github.com/user-attachments/assets/4ca2788c-2a90-46ad-b18b-43a2d9299a5b)
+  ![image](https://github.com/user-attachments/assets/da05963f-7e42-4acc-9f0e-3498a059264f)
+  ![image](https://github.com/user-attachments/assets/5b5ada79-767c-4fb7-8d9e-43114d0b7f11)
+
   - <b>Fetch the initial password of argocd server</b>
   ```bash
   kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
