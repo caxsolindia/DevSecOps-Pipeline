@@ -310,17 +310,17 @@ sudo apt-get install trivy -y
 
 - <b>Now, go to <mark>Applications</mark> and click on <mark>New App</mark></b>
 ![image](https://github.com/user-attachments/assets/e3fb3f27-c64e-4296-8372-1e48b98deb70)
-
 ![image](https://github.com/user-attachments/assets/daeabe30-69f6-4d19-a20f-c02a147f9d04)
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
-![image](https://github.com/user-attachments/assets/bc2d9680-fe00-49f9-81bf-93c5595c20cc)
-![image](https://github.com/user-attachments/assets/1ea9d486-656e-40f1-804d-2651efb54cf6)
+![image](https://github.com/user-attachments/assets/c920144d-20eb-49fb-8132-a39bbdbc4129)
+![image](https://github.com/user-attachments/assets/698e7382-071f-4709-b808-76d28a7c7c42)
+
 - <b>Open port 31000 and 31100 on worker node and Access it on browser</b>
 ```bash
 <worker-public-ip>:31000
 ```
-![image](https://github.com/user-attachments/assets/a4b2a4b4-e1aa-4b22-ac6b-f40003d0723a)
+![image](https://github.com/user-attachments/assets/7e395936-a1a5-4b57-94e6-03f36efc41a6)
 
 ## Clean Up
 - <b id="Clean">Delete eks cluster</b>
