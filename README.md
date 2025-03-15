@@ -144,6 +144,7 @@ sudo apt-get install jenkins -y
   sudo apt update -y
   sudo apt install fontconfig openjdk-17-jre -y
   ```
+  - Configure AWSCLI (<a href="https://github.com/DevMadhup/DevOps-Tools-Installations/blob/main/AWSCLI/AWSCLI.sh">Setup AWSCLI</a>)
   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   sudo apt install unzip
