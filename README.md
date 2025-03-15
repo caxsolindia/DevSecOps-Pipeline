@@ -224,8 +224,9 @@ sudo apt-get install trivy -y
   ```bash
   kubectl get svc -n argocd
   ```
-  - <b> Check the port where ArgoCD server is running and expose it on security groups of a worker node</b>
-  ![image](https://github.com/user-attachments/assets/a2932e03-ebc7-42a6-9132-82638152197f)
+  - <b> Check the port where ArgoCD server is running and expose it on security groups of a cluster node</b>
+![image](https://github.com/user-attachments/assets/6adc3053-f1c5-464e-baf7-903aef38abf2)
+
   - <b>Access it on browser, click on advance and proceed with</b>
   ```bash
   <public-ip-worker>:<port>
