@@ -16,12 +16,12 @@
 ### How pipeline will look after deployment:
 - <b>CI pipeline to build and push</b>
 
-![image](https://github.com/user-attachments/assets/45a80fdd-ff6e-4a44-90de-6d23c22233d0)
+![image](https://github.com/user-attachments/assets/b882ceb6-2f05-4e8a-901a-344393beab67)
 
 
 - <b>CD pipeline to update application version</b>
 
-![image](https://github.com/user-attachments/assets/82b3cb42-2197-48f9-9cbf-ca18dd1b303e)
+![image](https://github.com/user-attachments/assets/17b66781-70a7-424d-bc43-24e62598b3a1)
 
 - <b>ArgoCD application for deployment on EKS</b>
 ![image](https://github.com/user-attachments/assets/0fa4529f-b0e1-4791-b454-1af5e54b7aa2)
