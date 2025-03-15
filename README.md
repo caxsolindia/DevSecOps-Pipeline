@@ -49,7 +49,7 @@
 sudo su
 ```
 > [!Note]
-> This project will be implemented on North California region (us-west-1).
+> This project will be implemented on Asia Pacific (Mumbai) region (ap-south-1).
 
 - <b>Create 1 Master machine on AWS with 2CPU, 8GB of RAM (t2.large) and 29 GB of storage and install Docker on it.</b>
 #
