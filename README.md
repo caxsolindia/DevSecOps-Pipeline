@@ -181,8 +181,8 @@ sudo apt-get install jenkins -y
 - <b id="docker">Install docker (Jenkins Worker)</b>
 
 ```bash
-apt install docker.io -y
-usermod -aG docker ubuntu && newgrp docker
+sudo apt install docker.io -y
+sudo usermod -aG docker ubuntu && newgrp docker
 ```
 #
 - <b id="Sonar">Install and configure SonarQube (Master machine)</b>
