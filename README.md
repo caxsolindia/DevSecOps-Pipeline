@@ -287,20 +287,17 @@ sudo apt-get install trivy -y
 #
 - <b>Now, go to github repository and under <mark>automations</mark> directory update the <mark>instance-id</mark> field on the <mark>updatebackendnew.sh</mark> with the k8s worker's instance id</b>
 ![image](https://github.com/user-attachments/assets/2c376ae8-25fb-4125-bdfd-07f251cc0634)
-
-![image](https://github.com/user-attachments/assets/bdcc57b1-15b8-4ff9-a2e2-93d46b8ea56e)
 #
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
-![image](https://github.com/user-attachments/assets/1a8287fc-b205-4156-8342-3f660f15e8fa)
+![image](https://github.com/user-attachments/assets/450b4876-4317-4fc5-9a7a-85d1ed11e676)
 #
-- <b>Create a <mark>Wanderlust-CI</mark> pipeline</b>
-![image](https://github.com/user-attachments/assets/55c7b611-3c20-445f-a49c-7d779894e232)
+- <b>Create a <mark>backend-CI</mark> pipeline</b>
+![image](https://github.com/user-attachments/assets/a90593b2-6e16-4927-87c6-a1664aee86f1)
+#
+- <b>Create one more pipeline <mark>backend-CD</mark></b>
+![image](https://github.com/user-attachments/assets/e1630210-c50e-47fd-9a97-d05f1f47e257)
+![image](https://github.com/user-attachments/assets/538e1a00-1876-4af5-976b-96ded0f4f080)
 
-#
-- <b>Create one more pipeline <mark>Wanderlust-CD</mark></b>
-![image](https://github.com/user-attachments/assets/23f84a93-901b-45e3-b4e8-a12cbed13986)
-![image](https://github.com/user-attachments/assets/ac79f7e6-c02c-4431-bb3b-5c7489a93a63)
-![image](https://github.com/user-attachments/assets/46a5937f-e06e-4265-ac0f-42543576a5cd)
 #
 - <b>Go to <mark>Settings --> Repositories</mark> and click on <mark>Connect repo</mark> </b>
 ![image](https://github.com/user-attachments/assets/cc8728e5-546b-4c46-bd4c-538f4cd6a63d)
