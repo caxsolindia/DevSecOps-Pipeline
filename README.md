@@ -44,10 +44,6 @@
 
 ### Pre-requisites to implement this project:
 #
-- Root user access
-```bash
-sudo su
-```
 > [!Note]
 > This project will be implemented on Asia Pacific (Mumbai) region (ap-south-1).
 
@@ -62,11 +58,11 @@ sudo su
 Install & Configure Docker by using below command, "NewGrp docker" will refresh the group config hence no need to restart the EC2 machine.
 
 ```bash
-apt-get update
+sudo apt-get update
 ```
 ```bash
-apt-get install docker.io -y
-usermod -aG docker ubuntu && newgrp docker
+sudo apt-get install docker.io -y
+sudo usermod -aG docker ubuntu && newgrp docker
 ```
 #
 - <b id="Jenkins">Install and configure Jenkins (Master machine)</b>
