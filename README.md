@@ -300,21 +300,18 @@ sudo apt-get install trivy -y
 
 #
 - <b>Go to <mark>Settings --> Repositories</mark> and click on <mark>Connect repo</mark> </b>
-![image](https://github.com/user-attachments/assets/cc8728e5-546b-4c46-bd4c-538f4cd6a63d)
-![image](https://github.com/user-attachments/assets/eb3646e2-db84-4439-a11a-d4168080d9cc)
-![image](https://github.com/user-attachments/assets/a07f8703-5ef3-4524-aaa7-39a139335eb7)
+
+![image](https://github.com/user-attachments/assets/14802f83-a107-49bd-8fbc-eb0d7ffb9495)
+![image](https://github.com/user-attachments/assets/20524adf-f8bb-4163-82d3-ac0cb1825759)
+![image](https://github.com/user-attachments/assets/ffb97ddc-5eb4-4cca-ace1-2d0614f779d6)
+
 > [!Note]
 > Connection should be successful
 
 - <b>Now, go to <mark>Applications</mark> and click on <mark>New App</mark></b>
+![image](https://github.com/user-attachments/assets/e3fb3f27-c64e-4296-8372-1e48b98deb70)
 
-![image](https://github.com/user-attachments/assets/ec2d7a51-d78f-4947-a90b-258944ad59a2)
-
-> [!Important]
-> Make sure to click on the <mark>Auto-Create Namespace</mark> option while creating argocd application
-
-![image](https://github.com/user-attachments/assets/55dcd3c2-5424-4efb-9bee-1c12bbf7f158)
-![image](https://github.com/user-attachments/assets/3e2468ff-8cb2-4bda-a8cc-0742cd6d0cae)
+![image](https://github.com/user-attachments/assets/daeabe30-69f6-4d19-a20f-c02a147f9d04)
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
 ![image](https://github.com/user-attachments/assets/bc2d9680-fe00-49f9-81bf-93c5595c20cc)
