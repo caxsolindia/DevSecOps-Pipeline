@@ -270,7 +270,7 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/2fdc1e56-f78c-43d2-914a-104ec2c8ea86)
 #
 - <b> Go to <mark> Manage Jenkins --> credentials</mark> and add Github credentials to push updated code from the pipeline:</b>
-![image](https://github.com/user-attachments/assets/4d0c1a47-621e-4aa2-a0b1-71927fcdaef4)
+![image](https://github.com/user-attachments/assets/202325ab-8b84-42e9-97e2-0df9934e64c5)
 > [!Note]
 > While adding github credentials add Personal Access Token in the password field.
 #
@@ -278,8 +278,8 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/ae866185-cb2b-4e83-825b-a125ec97243a)
 #
 - <b>Now again, Go to <mark> Manage Jenkins --> System</mark> and search for Global Trusted Pipeline Libraries:</b
-![image](https://github.com/user-attachments/assets/874b2e03-49b9-4c26-9b0f-bd07ce70c0f1)
-![image](https://github.com/user-attachments/assets/1ca83b43-ce85-4970-941d-9a819ce4ecfd)
+
+![image](https://github.com/user-attachments/assets/7fb3081b-ed93-47be-9f52-938fe196ac7d)
 #
 - <b>Login to SonarQube server, go to <mark>Administration --> Webhook</mark> and click on create </b>
 ![image](https://github.com/user-attachments/assets/16527e72-6691-4fdf-a8d2-83dd27a085cb)
