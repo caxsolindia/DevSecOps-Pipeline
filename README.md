@@ -322,15 +322,15 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/c920144d-20eb-49fb-8132-a39bbdbc4129)
 ![image](https://github.com/user-attachments/assets/698e7382-071f-4709-b808-76d28a7c7c42)
 
-- <b>Open port 31000 and 31100 on worker node and Access it on browser</b>
+- <b>Open port 31000 and 31100 on  k8s worker node and Access it on browser</b>
 ```bash
-<worker-public-ip>:31000
+<k8s worker's-public-ip>:31000
 ```
 ![image](https://github.com/user-attachments/assets/7e395936-a1a5-4b57-94e6-03f36efc41a6)
 
 ## Clean Up
 - <b id="Clean">Delete eks cluster</b>
 ```bash
-eksctl delete cluster --name=wanderlust --region=us-west-1
+eksctl delete cluster --name=dev-cluster --region=ap-south-1
 ```
 #
