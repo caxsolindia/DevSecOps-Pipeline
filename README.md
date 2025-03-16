@@ -253,6 +253,7 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/3fb9dd65-7c04-43d0-b476-4fe334263652)
 
 - <b id="Sonar">After OWASP plugin is installed, Now move to <mark>Manage jenkins --> Credentials</mark> (Jenkins Worker)</b>
+- <b> You can generate API key for OWASP from here : https://nvd.nist.gov/developers/request-an-api-key </b>
 ![image](https://github.com/user-attachments/assets/f99ca034-beaa-4baa-9de1-fa7daeeb990d)
 
 - <b id="Sonar">After OWASP plugin is installed, Now move to <mark>Manage jenkins --> Tools</mark> (Jenkins Worker)</b>
