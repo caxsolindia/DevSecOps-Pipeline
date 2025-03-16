@@ -300,7 +300,7 @@ sudo apt-get install trivy -y
 - <b>Create one more pipeline <mark>backend-CD</mark></b>
 ![image](https://github.com/user-attachments/assets/e1630210-c50e-47fd-9a97-d05f1f47e257)
 
-- <b>Jenkins Pipeline script for CI and CD you can find in <mark>automation/</mark> folder</b>
+- <b>The Jenkins Pipeline script for CI and CD can be found in the <mark>automations/</mark> folder of the repository.</b>
 
 ![image](https://github.com/user-attachments/assets/538e1a00-1876-4af5-976b-96ded0f4f080)
 
