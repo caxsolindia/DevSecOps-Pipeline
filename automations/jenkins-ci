@@ -1,0 +1,122 @@
+@Library('Shared') _
+pipeline {
+    agent { label 'Node' }
+
+    environment {
+        SONAR_HOME = tool "Sonar"
+    }
+
+    stages {
+        stage("Workspace cleanup") {
+            steps {
+                script {
+                    cleanWs()
+                }
+            }
+        }
+
+        stage('Git: Code Checkout') {
+            steps {
+                script {
+                    code_checkout("https://github.com/ronaks9065/backend-flow.git", "master")
+                }
+            }
+        }
+
+        stage("Generate Random Tag") {
+            steps {
+                script {
+                    def randomTag = sh(script: "openssl rand -hex 3", returnStdout: true).trim()
+                    echo "Generated Random Tag: ${randomTag}"
+                    env.BACKEND_DOCKER_TAG = randomTag
+                }
+            }
+        }
+        
+        stage("npm install") {
+            steps {
+                script {
+                    sh "npm install"
+                }
+            }
+        }
+
+        stage("Trivy: Filesystem scan") {
+            steps {
+                script {
+                    trivy_scan()
+                }
+            }
+        }
+
+        stage("OWASP: Dependency check") {
+            steps {
+                script {
+                        withCredentials([string(credentialsId: 'NVD_API_KEY', variable: 'NVD_API_KEY')]) {
+                        owasp_dependency()
+                    }
+                }
+            }
+        }
+        
+        stage("SonarQube: Code Analysis") {
+            steps {
+                script {
+                    sonarqube_analysis("Sonar", "backend-flow", "backend-flow")
+                }
+            }
+        }
+
+        stage("SonarQube: Code Quality Gates") {
+            steps {
+                script {
+                    sonarqube_code_quality()
+                }
+            }
+        }
+        
+        stage("Backend env setup") {
+            steps {
+                script{
+                    dir("automations"){
+                        sh "bash updatebackendnew.sh"
+                    }
+                }
+            }
+        }
+
+        stage("Docker: Build Images") {
+            steps {
+                script {
+                    dir('.') {
+                        docker_build("backend-app", "${env.BACKEND_DOCKER_TAG}", "ronak1907")
+                    }
+                }
+            }
+        }
+
+        stage("Docker: Push to DockerHub") {
+            steps {
+                script {
+                    docker_push("backend-app", "${env.BACKEND_DOCKER_TAG}", "ronak1907")
+                }
+            }
+        }
+        
+        stage("Docker: Cleanup") {
+            steps {
+                script {
+                    docker_cleanup("backend-app", "${env.BACKEND_DOCKER_TAG}", "ronak1907")
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            build job: "backend-CD", parameters: [
+                string(name: 'BACKEND_DOCKER_TAG', value: env.BACKEND_DOCKER_TAG)
+            ]
+        }
+    }
+}

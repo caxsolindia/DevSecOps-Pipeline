@@ -1,0 +1,70 @@
+@Library('Shared') _
+pipeline {
+    agent { label 'Node' }
+
+    parameters {
+        string(name: 'BACKEND_DOCKER_TAG', defaultValue: '', description: 'Docker Tag from CI')
+    }
+
+    stages {
+        stage("Workspace cleanup") {
+            steps {
+                script {
+                    cleanWs()
+                }
+            }
+        }
+
+        stage('Git: Code Checkout') {
+            steps {
+                script {
+                    code_checkout("https://github.com/ronaks9065/backend-flow-manifests.git", "master")
+                }
+            }
+        }
+
+        stage('Receive Docker Image Tag') {
+            steps {
+                script {
+                    def dockerTag = "${params.BACKEND_DOCKER_TAG}"
+                    echo "Received Docker Tag: ${dockerTag}"
+                    env.BACKEND_DOCKER_TAG = dockerTag
+                }
+            }
+        }
+
+        stage("Update: Kubernetes manifests") {
+            steps {
+                script {
+                    dir('backend') {
+                        sh """
+                            sed -i -e s/backend-app.*/backend-app:${env.BACKEND_DOCKER_TAG}/g backend.yaml
+                        """
+                    }
+                }
+            }
+        }
+
+        stage("Git: Code update and push to GitHub") {
+            steps {
+                script {
+                    withCredentials([gitUsernamePassword(credentialsId: 'Github-cred', gitToolName: 'Default')]) {
+                        sh '''
+                        echo "Checking repository status: "
+                        git status
+                    
+                        echo "Adding changes to git: "
+                        git add .
+                        
+                        echo "Committing changes: "
+                        git commit -m "Updated Kubernetes manifests with new Docker tag"
+                        
+                        echo "Pushing changes to GitHub: "
+                        git push https://github.com/ronaks9065/backend-flow-manifests.git master
+                        '''
+                    }
+                }
+            }
+        }
+    }
+}
