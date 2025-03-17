@@ -1,6 +1,6 @@
 # Backend CI/CD Pipeline - End to End Implementation on EKS
 
-### This project demonstrates a robust end-to-end CI/CD pipeline for deploying a backend application on AWS EKS (Elastic Kubernetes Service) with complete DevSecOps and GitOps practices.
+This project demonstrates a robust end-to-end CI/CD pipeline for deploying a backend application on AWS EKS (Elastic Kubernetes Service) with complete DevSecOps and GitOps practices.
 
 ### In this demo, we will see how to deploy an end to end backend application on EKS cluster.
 
@@ -36,6 +36,6 @@
 - Continuous synchronization with the GitHub repo.
 - Rollback to previous versions with ease.
 
-  # Conclusion
-  - This CI/CD pipeline is a complete DevSecOps solution with best practices for security, code quality, containerization, and GitOps-driven continuous deployment.
+# Conclusion
+- This CI/CD pipeline is a complete DevSecOps solution with best practices for security, code quality, containerization, and GitOps-driven continuous deployment.
 
