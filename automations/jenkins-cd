@@ -18,7 +18,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script {
-                    code_checkout("https://github.com/caxsolindia/DevSecOps-Pipeline.git", "master")
+                    code_checkout("https://github.com/ronaks9065/backend-flow-manifests.git", "master")
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
         stage("Update: Kubernetes manifests") {
             steps {
                 script {
-                    dir('manifests/backend') {
+                    dir('backend') {
                         sh """
                             sed -i -e s/backend-app.*/backend-app:${env.BACKEND_DOCKER_TAG}/g backend.yaml
                         """
@@ -60,7 +60,7 @@ pipeline {
                         git commit -m "Updated Kubernetes manifests with new Docker tag"
                         
                         echo "Pushing changes to GitHub: "
-                        git push https://github.com/caxsolindia/DevSecOps-Pipeline.git master
+                        git push https://github.com/ronaks9065/backend-flow-manifests.git master
                         '''
                     }
                 }
