@@ -18,7 +18,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script {
-                    code_checkout("https://github.com/ronaks9065/backend-flow.git", "master")
+                    code_checkout("https://github.com/caxsolindia/DevSecOps-Pipeline.git", "master")
                 }
             }
         }
