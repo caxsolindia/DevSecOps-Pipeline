@@ -27,7 +27,7 @@ app.use('/api/posts', postsRouter);
 app.use('/api/auth', authRouter);
 
 app.get('/', (req, res) => {
-  res.send('Yay!! is now accessible');
+  res.send('Yay!! pavan is now accessible');
 });
 
 app.listen(port, () => {
