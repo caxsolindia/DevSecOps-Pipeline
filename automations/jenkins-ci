@@ -8,17 +8,6 @@ pipeline {
 
     stages {
         
-        stage("Skip CI if Docker Tag is Pushed") {
-            steps {
-                script {
-                    if (env.GIT_COMMIT_MESSAGE?.contains("[skip-ci]")) {
-                        echo "Skipping CI pipeline as per commit message."
-                        return
-                    }
-                }
-            }
-        }
-        
         stage("Workspace cleanup") {
             steps {
                 script {
