@@ -27,7 +27,7 @@ app.use('/api/posts', postsRouter);
 app.use('/api/auth', authRouter);
 
 app.get('/', (req, res) => {
-  res.send('Yay!! backend is now accessible');
+  res.send('Yay!!! backend is now accessible');
 });
 
 app.listen(port, () => {
