@@ -18,7 +18,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script {
-                    code_checkout("https://github.com/ronaks9065/backend-flow-manifests.git", "master")
+                    code_checkout("https://github.com/caxsolindia/DevSecOps-manifests.git", "master")
                 }
             }
         }
@@ -60,7 +60,7 @@ pipeline {
                         git commit -m "Updated Kubernetes manifests with new Docker tag"
                         
                         echo "Pushing changes to GitHub: "
-                        git push https://github.com/ronaks9065/backend-flow-manifests.git master
+                        git push https://github.com/caxsolindia/DevSecOps-manifests.git master
                         '''
                     }
                 }
