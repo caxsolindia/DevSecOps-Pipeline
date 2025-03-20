@@ -4,7 +4,7 @@
 
 ### <mark>Project Deployment Flow:</mark>
 
-<img src="https://github.com/ronaks9065/devsecops-pipeline/blob/master/automations/DevSecOps%2BGitOps.gif" />
+<img src="https://github.com/caxsolindia/DevSecOps-Pipeline/blob/master/automations/diagram-cicd.png" />
 
 ## Tech stack used in this project:
 - GitHub (Code)
